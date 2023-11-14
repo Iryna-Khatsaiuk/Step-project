@@ -1,0 +1,25 @@
+.header {
+    @include flex(start, start, column);
+    gap: 30px;
+    padding: 20px;
+}
+
+.header__navigation {
+    @include flex(start, space-between, row);
+}
+
+.header__menu-wrapper {
+    @include flex(center, center, row);
+    position: relative;
+
+    & p {
+        color: $main-color;
+        text-align: center;
+        font-family: Gilroy-SemiBold;
+        font-size: 25px;
+    }
+
+    & input {
+        position: absolute;
+    }
+}
