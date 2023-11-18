@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/7effe4df3b.js" crossorigin="anonymous"></script>
     <title>Digital Design</title>
 </head>
-<body>
-    <header>
-        @@include('./html/layout/header.html')
-    </header>
-   <main>
-    @@include('./html/layout/about-me.html')
-    @@include('./html/layout/company-logos.html')
-    @@include('./html/layout/what-i-do.html')
-    @@include('./html/layout/selected-work.html')
-    @@include('./html/layout/my-clients.html')
-    @@include('./html/layout/our-team.html')
-    @@include('./html/layout/contact.html')
-   </main>
+<!-- facebook icon <i class="fa-brands fa-facebook-f" style="color: #252525;"></i> -->
+<!-- twitter icon <i class="fa-brands fa-twitter" style="color: #252525;"></i> -->
+<!-- linkedin icon <i class="fa-brands fa-linkedin-in"></i> -->
+<!-- dribble icon <i class="fa-brands fa-dribbble" style="color: #252525;"></i>-->
 
-   <footer>
-    @@include('./html/layout/footer.html')
-   </footer>
+<body>
+    @@include('./html/layout/header.html')
+    <main>
+        @@include('./html/layout/about-me.html')
+        @@include('./html/layout/company-logos.html')
+        @@include('./html/layout/what-i-do.html')
+        @@include('./html/layout/selected-work.html')
+        @@include('./html/layout/my-clients.html')
+        @@include('./html/layout/our-team.html')
+        @@include('./html/layout/contact.html')
+    </main>
+
+    <footer>
+        @@include('./html/layout/footer.html')
+    </footer>
 </body>
+
 </html>

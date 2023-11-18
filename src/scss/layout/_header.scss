@@ -1,25 +1,53 @@
 .header {
-    @include flex(start, start, column);
-    gap: 30px;
-    padding: 20px;
+	@include flex(start, start, column);
+	gap: 30px;
+	padding: 20px;
 }
 
 .header__navigation {
-    @include flex(start, space-between, row);
+	@include flex(center, space-between, row);
+	width: 100%;
 }
 
-.header__menu-wrapper {
-    @include flex(center, center, row);
-    position: relative;
-
-    & p {
-        color: $main-color;
-        text-align: center;
-        font-family: Gilroy-SemiBold;
-        font-size: 25px;
-    }
-
-    & input {
-        position: absolute;
-    }
+.header__menu-heading {
+	color: $main-color;
+	text-align: center;
+	font-family: Gilroy-bold;
+	font-size: 25px;
+}
+.header__heading-text {
+	display: none;
+	// gap: 10px;
+	// color: $main-color;
+	// text-align: center;
+	// font-size: 25px;
+}
+// .header__heading-text--bold {
+// 	// font-family: Gilroy-bold;
+// }
+// .header__heading-text--light,
+// .header__trademark-sign {
+// 	font-family: Gilroy-light;
+// }
+.header__main-site-heading {
+	color: $main-color;
+	font-family: Gilroy-bold;
+	font-size: 57px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	text-transform: capitalize;
+	text-align: center;
+	& span {
+		color: $main-color;
+		font-family: Gilroy-light;
+		font-size: 57px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+		text-transform: capitalize;
+	}
+	&::after {
+		content: url(../../img/);
+	}
 }
