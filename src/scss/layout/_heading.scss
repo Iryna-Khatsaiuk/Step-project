@@ -1,0 +1,38 @@
+.main-heading-section {
+	@include flex(center, flex-start, column, 30px);
+	&__main-site-heading {
+		text-align: center;
+		color: $main-color;
+		font-family: Gilroy-bold;
+		font-size: 57px;
+		font-weight: 300;
+		text-transform: capitalize;
+		& span {
+			display: block;
+			color: $main-color;
+			font-family: Gilroy-light;
+			font-size: 57px;
+			font-weight: 300;
+			text-transform: capitalize;
+
+			@media (min-width: $bp-md) {
+				font-size: 120px;
+			}
+
+			@media (min-width: $bp-lg) {
+				font-size: 150px;
+			}
+		}
+
+		@media (min-width: $bp-md) {
+			font-size: 120px;
+		}
+
+		@media (min-width: $bp-lg) {
+			font-size: 150px;
+		}
+	}
+}
+.main-heading-section__banner img {
+	width: 100vw;
+}

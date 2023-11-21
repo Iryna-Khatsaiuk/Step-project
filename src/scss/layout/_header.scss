@@ -1,4 +1,58 @@
 .header {
+	@include flex(center, flex-start, column, 30px);
+	padding: 20px;
+}
+
+.header__navigation {
+	@include flex(center, space-between, row);
+	width: 100%;
+}
+
+.header__logo-wrapper {
+	@media (min-width: $bp-md) {
+		img {
+			margin-right: 10px;
+		}
+
+		@include flex(center, flex-start, row);
+		.header__trademark-sign {
+			display: inline;
+			align-self: flex-start;
+			color: $main-color;
+			font-size: 25px;
+		}
+	}
+}
+
+.header__trademark-sign {
+	display: none;
+}
+
+.header__menu-heading {
+	color: $main-color;
+	text-align: center;
+	font-family: Gilroy-bold;
+	font-size: 25px;
+}
+
+.header__heading-text {
+	display: none;
+
+	@media (min-width: $bp-md) {
+		display: inline;
+		color: $main-color;
+		font-size: 25px;
+		&--bold {
+			font-family: Gilroy-bold;
+		}
+		&--light,
+		.header__trademark-sign {
+			font-family: Gilroy-light;
+		}
+	}
+}
+
+.header {
     @include flex(start, start, column);
     gap: 30px;
     padding: 20px;
