@@ -1,6 +1,5 @@
 .header {
-	@include flex(start, start, column);
-	gap: 30px;
+	@include flex(center, flex-start, column, 30px);
 	padding: 20px;
 }
 
@@ -9,45 +8,46 @@
 	width: 100%;
 }
 
+.header__logo-wrapper {
+	@media (min-width: $bp-md) {
+		img {
+			margin-right: 10px;
+		}
+
+		@include flex(center, flex-start, row);
+		.header__trademark-sign {
+			display: inline;
+			align-self: flex-start;
+			color: $main-color;
+			font-size: 25px;
+		}
+	}
+}
+
+.header__trademark-sign {
+	display: none;
+}
+
 .header__menu-heading {
 	color: $main-color;
 	text-align: center;
 	font-family: Gilroy-bold;
 	font-size: 25px;
 }
+
 .header__heading-text {
 	display: none;
-	// gap: 10px;
-	// color: $main-color;
-	// text-align: center;
-	// font-size: 25px;
-}
-// .header__heading-text--bold {
-// 	// font-family: Gilroy-bold;
-// }
-// .header__heading-text--light,
-// .header__trademark-sign {
-// 	font-family: Gilroy-light;
-// }
-.header__main-site-heading {
-	color: $main-color;
-	font-family: Gilroy-bold;
-	font-size: 57px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: normal;
-	text-transform: capitalize;
-	text-align: center;
-	& span {
+
+	@media (min-width: $bp-md) {
+		display: inline;
 		color: $main-color;
-		font-family: Gilroy-light;
-		font-size: 57px;
-		font-style: normal;
-		font-weight: 300;
-		line-height: normal;
-		text-transform: capitalize;
-	}
-	&::after {
-		content: url(../../img/);
+		font-size: 25px;
+		&--bold {
+			font-family: Gilroy-bold;
+		}
+		&--light,
+		.header__trademark-sign {
+			font-family: Gilroy-light;
+		}
 	}
 }
