@@ -1,10 +1,14 @@
 @import "./base/reset";
+@import "./abstracts/variables";
 @import "./base/default";
 @import "./base/typography";
-@import "./abstracts/variables";
 @import "./abstracts/mixins";
 @import "./layout/header";
+@import "./layout/heading.scss";
+@import "./layout/about-me.scss";
 @import "./layout/what-i-do.scss";
 @import "./layout/my-clients.scss";
 @import "./layout/contact.scss";
 @import "./layout/secondary-button.scss";
+@import "./layout/footer.scss";
+@import "./layout/socials.scss";
