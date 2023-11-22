@@ -12,10 +12,12 @@
   text-transform: capitalize;
   
 @media (min-width: $bp-md) {
-    max-width: 196px;
+    min-width: 196px;
     align-self: center;
+ }
+  @media (min-width: $bp-lg) {
+    align-self: flex-start;
   }
-
 }
 
 .secondary-button::after{
