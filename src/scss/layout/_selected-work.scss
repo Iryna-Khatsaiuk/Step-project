@@ -1,0 +1,102 @@
+.selected-works-section {
+	padding-bottom: 0;
+}
+.selected-works-section__main-title {
+	color: #252525;
+	text-align: center;
+	font-family: Gilroy-light;
+	font-size: 80px;
+	font-weight: 300;
+	letter-spacing: 3.2px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	@media (max-width: 440px) {
+		font-size: 50px;
+	}
+	@media (min-width: $bp-lg) {
+		margin-bottom: 50px;
+		font-size: 212px;
+	}
+}
+.selected-works-section__design-works-items-wrapper {
+	display: grid;
+	justify-content: center;
+	gap: 20px;
+
+	@media (min-width: $bp-md) {
+		gap: 30px;
+	}
+	@media (min-width: $bp-lg) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 40px;
+	}
+	@media (min-width: $bp-lg) and (max-width: 1450px) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+}
+.design-works-item {
+	width: 100%;
+	@media (min-width: $bp-lg) {
+		&:nth-of-type(3) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+	}
+}
+.design-works-item img {
+	max-width: 87vw;
+	@media (min-width: $bp-lg) {
+		max-width: none;
+		width: 100%;
+	}
+}
+.design-works-item__subheading {
+	color: #000;
+	font-family: Gilroy-Bold;
+	font-size: 35px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.design-works-item--flex-item {
+	@include flex(flex-start, flex-start, column, 30px);
+	.design-works-item__chip-wrapper {
+		@include flex(space-around, flex-start, row, 30px);
+	}
+	margin-bottom: 20px;
+	@media (min-width: $bp-md) {
+		margin-bottom: 40px;
+	}
+	@media (min-width: $bp-lg) {
+		@include flex(flex-start, space-between, row, 0.5%);
+		margin: 0;
+	}
+}
+.design-works-item__chip-item {
+	color: $main-color;
+	font-family: Gilroy-bold;
+	font-size: 18px;
+	font-weight: 400;
+}
+.design-works-item__all-works-chip {
+	@media (min-width: $bp-md) {
+		padding: 15px 60px;
+		max-width: fit-content;
+		justify-self: center;
+	}
+	@media (min-width: $bp-lg) {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+	@media (min-width: $bp-lg) and (max-width: 1450px) {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		justify-self: end;
+	}
+}
+.design-works-item__subheading-wrapper {
+	@include flex(flex-start, flex-start, column, 30px);
+}
