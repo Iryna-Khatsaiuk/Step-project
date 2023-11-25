@@ -10,10 +10,3 @@
 	flex-direction: $direction;
 	gap: $gap;
 }
-
-@mixin flex($align, $justify, $direction) {
-    display: flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-direction: $direction;
-}

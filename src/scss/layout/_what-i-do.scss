@@ -1,144 +1,109 @@
-@import "./abstracts/variables";
+.what-i-do {
+	@include flex($align: center, $justify: space-between, $direction: column);
+	gap: 20px;
+	border-bottom: $border-bottom;
 
-.what-i-do-wrapper {
-  padding: 0 20px;
+	@media (min-width: $bp-md) {
+		gap: 40px;
+	}
 
-  @media (min-width: $bp-md) {
-    padding: 0 30px;
-  }
-  @media (min-width: $bp-lg) {
-    padding: 70px;
-  }
+	@media (min-width: $bp-lg) {
+		@include flex($align: center, $justify: space-between, $direction: row);
+		gap: 0;
+	}
+
+	&::before {
+		content: "";
+		background: url(../../img/what-i-do/what-i-do-desktop.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 478px;
+		width: 100%;
+		display: block;
+
+		@media (min-width: $bp-md) {
+			height: 991px;
+		}
+
+		@media (min-width: $bp-lg) {
+			height: 1137px;
+			width: 60%;
+		}
+	}
 }
 
-.what-i-do-text {
-  @include flex(flex-start, flex-start, column);
-  width: 100%;
-  gap: 10px;
+.what-i-do__header {
+	margin-bottom: 40px;
 
-  @media (min-width: $bp-lg) {
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-  }
+	@media (min-width: $bp-lg) {
+		margin-bottom: 100px;
+		padding-top: 70px;
+	}
 }
 
-.what-i-do-text::before {
-  content: "";
-  background: url(../../img/what-i-do/what-i-do-mobile.jpg);
-  background-size: cover;
-  height: 478px;
-  width: 100%;
-  margin-bottom: 10px;
-  background-repeat: no-repeat;
+.what-i-do__paragraph-item {
+	@include flex($align: start, $justify: space-between, $direction: column);
+	gap: 10px;
+	padding: 30px 0;
+	border-bottom: $border-bottom;
 
-  @media (min-width: $bp-md) {
-    background: url(../../img/what-i-do/what-i-do-tablet.jpg);
-    height: 991px;
-    margin-bottom: 30px;
-  }
+	&:first-of-type {
+		padding-top: 0;
+	}
 
-  @media (min-width: $bp-lg) {
-    background: url(../../img/what-i-do/what-i-do-desktop.jpg);
-    height: 1137px;
-    background-size: cover;
-    margin-bottom: 0;
-  }
+	&:last-of-type {
+		padding-bottom: 20px;
+		border-bottom: none;
+	}
+
+	&:nth-of-type(1) {
+		h5::before {
+			content: "01 ";
+		}
+	}
+	&:nth-of-type(2) {
+		h5::before {
+			content: "02 ";
+		}
+	}
+	&:nth-of-type(3) {
+		h5::before {
+			content: "03 ";
+		}
+	}
+	&:nth-of-type(4) {
+		h5::before {
+			content: "04 ";
+		}
+	}
+
+	@media (min-width: $bp-md) {
+		padding: 40px 0;
+
+		&:last-of-type {
+			padding-bottom: 40px;
+		}
+	}
+
+	@media (min-width: $bp-lg) {
+		&:last-of-type {
+			padding-bottom: 70px;
+		}
+	}
 }
 
-.what-i-do-text__title {
-  display: flex;
-  justify-content: center;
-  color: $main-color;
-  text-transform: uppercase;
-  font-family: Gilroy;
-  font-size: 54px;
-  font-weight: 300;
-  text-align: center;
+.what-i-do__sub-header {
+	font-size: 35px;
 
-  @media (min-width: $bp-sm) {
-    font-size: 80px;
-  }
-
-  @media (min-width: $bp-md) {
-    font-size: 137px;
-  }
-  @media (min-width: $bp-lg) {
-    font-size: 90px;
-    margin-bottom: 60px;
-  }
-}
-.what-i-do-text__list {
-  @include flex(flex-start, center, column);
-  gap: 30px;
-  position: relative;
-
-  & :nth-child(-n + 4) .what-i-do-text__item-title::before {
-    content: "04";
-    margin-right: 10px;
-  }
-
-  & :nth-child(-n + 3) .what-i-do-text__item-title::before {
-    content: "03";
-    margin-right: 10px;
-  }
-
-  & :nth-child(-n + 2) .what-i-do-text__item-title::before {
-    content: "02";
-    margin-right: 10px;
-  }
-  & :nth-child(-n + 1) .what-i-do-text__item-title::before {
-    content: "01";
-    margin-right: 10px;
-  }
-
-  @media (min-width: $bp-sm) {
-    gap: 40px;
-  }
-  @media (min-width: $bp-lg) {
-    & :nth-child(n + 4)::after {
-      border: none;
-    }
-  }
+	@media (min-width: $bp-md) {
+		font-size: 44px;
+	}
 }
 
-.what-i-do-text__item {
-  @include flex(flex-start, center, column);
-  gap: 10px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  margin-top: 30px;
-  position: relative;
-
-  &::after {
-    content: "";
-    border: 1px solid $main-color;
-    position: absolute;
-    width: 100%;
-    bottom: -30px;
-
-    @media (min-width: $bp-md) {
-      bottom: -40px;
-    }
-  }
-  @media (min-width: $bp-md) {
-    margin-top: 40px;
-    max-width: 940px;
-  }
-}
-
-.what-i-do-text__item-title {
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: Gilroy-SemiBold;
-
-  @media (min-width: $bp-sm) {
-    font-size: 35px;
-  }
-  @media (min-width: $bp-md) {
-    font-size: 44px;
-  }
+.what-i-do__desc {
+	font-family: $inter-font;
+	color: $black-color;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
 }
