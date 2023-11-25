@@ -12,26 +12,26 @@
 }
 
 .my-clients__title {
-  padding: 0 20px;
-  color: $main-color;
-  font-family: Gilroy;
-  font-size: 47px;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: center;
+	padding: 0 20px;
+	color: $main-color;
+	font-family: Gilroy-light;
+	font-size: 47px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
 
-  @media (min-width: $bp-sm) {
-    font-size: 75px;
-  }
+	@media (min-width: $bp-sm) {
+		font-size: 75px;
+	}
 
-  @media (min-width: $bp-md) {
-    font-size: 119px;
-    padding: 0 30px;
-  }
+	@media (min-width: $bp-md) {
+		font-size: 119px;
+		padding: 0 30px;
+	}
 
-  @media (min-width: $bp-1000) {
-    font-size: 137px;
-  }
+	@media (min-width: $bp-1000) {
+		font-size: 137px;
+	}
 }
 
 .my-clients-content {
@@ -40,9 +40,9 @@
   align-self: stretch;
   
 
-  @media (min-width: $bp-md) {
-    max-width: 940px;
-  }
+	@media (min-width: $bp-md) {
+		max-width: 940px;
+	}
 
   @media (min-width: $bp-lg) {
     display: grid;
@@ -52,24 +52,22 @@
     justify-content: space-between;
     margin-bottom: 50px;
 
-    & .my-clients-content__item-box:nth-child(-n + 3) {
-      border-top: none;
-      border-bottom: none;
-    }
+		& .my-clients-content__item-box:nth-child(-n + 3) {
+			border-top: none;
+			border-bottom: none;
+		}
 
-    & .my-clients-content__item-box:nth-child(n + 3) {
-      border-bottom: none;
-    }
+		& .my-clients-content__item-box:nth-child(n + 3) {
+			border-bottom: none;
+		}
 
-    & .my-clients-content__item-box:nth-child(3n + 1) {
-      border-left: none;
-      border-right: none;
-    }
-    & .my-clients-content__item-box:nth-child(3n) {
-      border-right: none;
-      border-left: none;
-    }
-  }
+		& .my-clients-content__item-box:nth-child(3n + 1) {
+			border-left: none;
+		}
+		& .my-clients-content__item-box:nth-child(3n) {
+			border-right: none;
+		}
+	}
 }
 
 .my-clients-content__item-box {
@@ -96,53 +94,53 @@
     left: 0;
   }
 
-  &:nth-child(5) .my-clients-content__item-box-avtor::before {
-    content: "";
-    background-image: url(../../img/client-5.jpg);
-    border-radius: 50px;
-    width: 70px;
-    height: 70px;
-    margin-left: 26px;
-    position: absolute;
-    background-size: cover;
-    left: 0;
-  }
+	&:nth-child(5) .my-clients-content__item-box-avtor::before {
+		content: "";
+		background-image: url(../../img/client-5.jpg);
+		border-radius: 50px;
+		width: 70px;
+		height: 70px;
+		margin-left: 26px;
+		position: absolute;
+		background-size: cover;
+		left: 0;
+	}
 
-  &:nth-child(4) .my-clients-content__item-box-avtor::before {
-    content: "";
-    background-image: url(../../img/client-4.jpg);
-    border-radius: 50px;
-    width: 70px;
-    height: 70px;
-    margin-left: 26px;
-    position: absolute;
-    background-size: cover;
-    left: 0;
-  }
+	&:nth-child(4) .my-clients-content__item-box-avtor::before {
+		content: "";
+		background-image: url(../../img/client-4.jpg);
+		border-radius: 50px;
+		width: 70px;
+		height: 70px;
+		margin-left: 26px;
+		position: absolute;
+		background-size: cover;
+		left: 0;
+	}
 
-  &:nth-child(3) .my-clients-content__item-box-avtor::before {
-    content: "";
-    background-image: url(../../img/client-3.jpg);
-    border-radius: 50px;
-    width: 70px;
-    height: 70px;
-    margin-left: 26px;
-    position: absolute;
-    background-size: cover;
-    left: 0;
-  }
+	&:nth-child(3) .my-clients-content__item-box-avtor::before {
+		content: "";
+		background-image: url(../../img/client-3.jpg);
+		border-radius: 50px;
+		width: 70px;
+		height: 70px;
+		margin-left: 26px;
+		position: absolute;
+		background-size: cover;
+		left: 0;
+	}
 
-  &:nth-child(2) .my-clients-content__item-box-avtor::before {
-    content: "";
-    background-image: url(../../img/client-2.jpg);
-    border-radius: 50px;
-    width: 70px;
-    height: 70px;
-    margin-left: 26px;
-    position: absolute;
-    background-size: cover;
-    left: 0;
-  }
+	&:nth-child(2) .my-clients-content__item-box-avtor::before {
+		content: "";
+		background-image: url(../../img/client-2.jpg);
+		border-radius: 50px;
+		width: 70px;
+		height: 70px;
+		margin-left: 26px;
+		position: absolute;
+		background-size: cover;
+		left: 0;
+	}
 
   &:nth-child(1) .my-clients-content__item-box-avtor::before {
     content: "";
@@ -175,24 +173,24 @@
 }
 
 .my-clients-content__item-box__title {
-  color: $title-color;
-  font-family: Gilroy;
-  font-size: 40px;
-  font-weight: 800;
-  line-height: 44px;
+	color: $title-color;
+	font-family: Gilroy;
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 44px;
 }
 
 .my-clients-content__item-box-avtor {
-  padding-left: 80px;
-  display: flex;
-  font-weight: 400;
-  line-height: 20px;
-  gap: 10px;
-  flex-direction: column;
-  height: 70px;
-  justify-content: center;
+	padding-left: 80px;
+	display: flex;
+	font-weight: 400;
+	line-height: 20px;
+	gap: 10px;
+	flex-direction: column;
+	height: 70px;
+	justify-content: center;
 
-  &:nth-of-type(1) span {
-    font-weight: 600;
-  }
+	&:nth-of-type(1) span {
+		font-weight: 600;
+	}
 }
