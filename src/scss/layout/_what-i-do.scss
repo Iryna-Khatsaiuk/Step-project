@@ -13,11 +13,9 @@
 
 .what-i-do-text {
   @include flex(flex-start, flex-start, column, 10px);
-  // width: 100%;
-  // // gap: 10px;
+ 
 
   @media (min-width: $bp-lg) {
-    display: flex;
     flex-direction: row;
     gap: 0;
   }
@@ -70,8 +68,11 @@
 }
 .what-i-do-text__list {
   @include flex(flex-start, center, column, 30px);
-  // gap: 30px;
   position: relative;
+
+  & :nth-child(n + 4)::after {
+      border: none;
+    }
 
   & :nth-child(-n + 4) .what-i-do-text__item-title::before {
     content: "04";
@@ -110,7 +111,6 @@
 
 .what-i-do-text__item {
   @include flex(flex-start, center, column, 10px);
-  // gap: 10px;
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
