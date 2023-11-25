@@ -1,0 +1,25 @@
+.footer {
+  padding: 20px 0px;
+  border-top: 1px solid $main-color;
+}
+
+.footer-content {
+  @include flex(center, center, column, 20px);
+  padding: 0 30px;
+//   align-self: stretch;
+  color: $title-color;
+  font-family: Gilroy-Regular;
+  font-size: 18px;
+  font-weight: 400;
+
+  @media (min-width: $bp-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: 0 70px;
+    height: 30px;
+  }
+}
