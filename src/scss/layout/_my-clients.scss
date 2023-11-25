@@ -1,15 +1,14 @@
 @import "./abstracts/variables";
 
 .my-clients {
-	@include flex(center, center, column);
-	padding: 30px 0px;
-	gap: 30px;
-	margin-top: 30px;
-	border-top: 1px solid $main-color;
-	border-bottom: 1px solid $main-color;
-	@media (min-width: $bp-lg) {
-		gap: 50px;
-	}
+  @include flex(center, center, column, 30px);
+  padding: 30px 0px;
+  margin-top: 30px;
+  border-top: 1px solid $main-color;
+  border-bottom: 1px solid $main-color;
+  @media (min-width: $bp-lg) {
+    gap: 50px;
+  }
 }
 
 .my-clients__title {
@@ -36,20 +35,22 @@
 }
 
 .my-clients-content {
-	@include flex(flex-start, center, column);
-	padding: 0px 30px;
-	align-self: stretch;
+  @include flex(flex-start, center, column);
+  padding: 0px 30px;
+  align-self: stretch;
+  
 
 	@media (min-width: $bp-md) {
 		max-width: 940px;
 	}
 
-	@media (min-width: $bp-lg) {
-		display: grid;
-		padding: 0 70px;
-		max-width: 100%;
-		grid-template-columns: repeat(3, 1fr);
-		justify-content: space-between;
+  @media (min-width: $bp-lg) {
+    display: grid;
+    padding: 0 70px;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin-bottom: 50px;
 
 		& .my-clients-content__item-box:nth-child(-n + 3) {
 			border-top: none;
@@ -70,25 +71,28 @@
 }
 
 .my-clients-content__item-box {
-	@include flex(flex-start, start, column);
-	padding: 40px 0px;
-	gap: 30px;
-	align-self: stretch;
-	border-bottom: 1px solid $main-color;
-	font-weight: 400;
-	line-height: 30px;
+  @include flex(flex-start, start, column, 30px);
+  padding: 40px 0px;
+  align-self: stretch;
+  border-bottom: 1px solid $main-color;
+  font-weight: 400;
+  line-height: 30px;
 
-	&:nth-child(6) .my-clients-content__item-box-avtor::before {
-		content: "";
-		background-image: url(../../img/client-6.jpg);
-		border-radius: 50px;
-		width: 70px;
-		height: 70px;
-		margin-left: 26px;
-		position: absolute;
-		background-size: cover;
-		left: 0;
-	}
+  &:nth-child(6){
+    border: none;
+  }
+
+  &:nth-child(6) .my-clients-content__item-box-avtor::before {
+    content: "";
+    background-image: url(../../img/client-6.jpg);
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    margin-left: 26px;
+    position: absolute;
+    background-size: cover;
+    left: 0;
+  }
 
 	&:nth-child(5) .my-clients-content__item-box-avtor::before {
 		content: "";
@@ -138,24 +142,34 @@
 		left: 0;
 	}
 
-	&:nth-child(1) .my-clients-content__item-box-avtor::before {
-		content: "";
-		background-image: url(../../img/client-1.jpg);
-		border-radius: 50px;
-		width: 70px;
-		height: 70px;
-		margin-left: 25px;
-		position: absolute;
-		background-size: cover;
-		left: 0;
-	}
+  &:nth-child(1) .my-clients-content__item-box-avtor::before {
+    content: "";
+    background-image: url(../../img/client-1.jpg);
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    margin-left: 25px;
+    position: absolute;
+    background-size: cover;
+    left: 0;
+  }
+  @media (min-width: $bp-md) {
+    &:nth-child(6){
+    border: none;
+    }
+  }
 
-	@media (min-width: $bp-lg) {
-		padding: 30px;
-		border: 1px solid $main-color;
-		position: relative;
-		justify-content: space-between;
-	}
+  @media (min-width: $bp-lg) {
+    &:nth-child(6){
+    border: 1px solid $main-color;
+    }
+  }
+  @media (min-width: $bp-lg) {
+    padding: 30px;
+    border: 1px solid $main-color;
+    position: relative;
+    justify-content: space-between;
+  }
 }
 
 .my-clients-content__item-box__title {
