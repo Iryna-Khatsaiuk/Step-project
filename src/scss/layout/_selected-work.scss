@@ -3,6 +3,11 @@
 	@media (min-width: $bp-lg) {
 	}
 }
+.design-works-item__discover-button {
+	@media (min-width: $bp-lg) {
+		align-self: flex-end;
+	}
+}
 .selected-works-section__main-title {
 	color: #252525;
 	text-align: center;
@@ -51,10 +56,13 @@
 }
 .design-works-item img {
 	max-width: 87vw;
+	vertical-align: bottom;
 	@media (min-width: $bp-lg) {
 		max-width: none;
 		width: 100%;
 	}
+}
+.design-works-item picture {
 }
 .design-works-item__subheading {
 	color: #000;

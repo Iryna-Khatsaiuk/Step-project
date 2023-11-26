@@ -2,6 +2,7 @@
 @import "./abstracts/mixins";
 @import "./abstracts/variables";
 @import "./base/default";
+@import "./layout/secondary-button.scss";
 @import "./base/typography";
 @import "./layout/header";
 @import "./layout/what-i-do.scss";
@@ -11,6 +12,6 @@
 @import "./layout/my-clients";
 @import "./layout/our-team";
 @import "./layout/contact.scss";
-@import "./layout/secondary-button.scss";
+
 @import "./layout/footer.scss";
 @import "./layout/socials.scss";
