@@ -1,4 +1,5 @@
 .our-team-section {
+	border-bottom: $border-bottom;
 	&__team-member-cards-wrapper {
 		@media (min-width: $bp-md) {
 			@include flex(center, flex-start, row);

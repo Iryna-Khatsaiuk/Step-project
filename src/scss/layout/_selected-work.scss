@@ -1,5 +1,7 @@
 .selected-works-section {
 	padding-bottom: 0;
+	@media (min-width: $bp-lg) {
+	}
 }
 .selected-works-section__main-title {
 	color: #252525;
