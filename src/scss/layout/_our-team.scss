@@ -1,0 +1,111 @@
+.our-team-section {
+	border-bottom: $border-bottom;
+	&__team-member-cards-wrapper {
+		@media (min-width: $bp-md) {
+			@include flex(center, flex-start, row);
+			row-gap: 30px;
+			column-gap: 40px;
+			flex-wrap: wrap;
+			.team-member-card-wrapper {
+				width: 45%;
+				& img {
+					width: 100%;
+				}
+				&:nth-child(4),
+				&:nth-child(6) {
+					margin: 0;
+				}
+			}
+		}
+		@media (min-width: $bp-lg) {
+			.team-member-card-wrapper {
+				width: 21%;
+			}
+		}
+	}
+
+	@include flex(center, flex-start, column, 30px);
+
+	&__join-team-info-wrapper {
+		@include flex(center, flex-start, column, 15px);
+
+		@media (min-width: $bp-md) {
+			align-items: flex-start;
+		}
+
+		@media (min-width: $bp-lg) {
+			width: 45%;
+		}
+		@media (min-width: $bp-lg) and (max-width: 1600px) {
+			width: 50%;
+			.our-team-section__description {
+				font-size: 50px;
+			}
+		}
+	}
+	&__join-team-heading {
+		color: $title-color;
+		text-align: center;
+		font-family: Gilroy-light;
+		font-size: 30px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	&__description {
+		color: $title-color;
+		text-align: center;
+		font-family: Gilroy-Bold;
+		font-size: 40px;
+		font-weight: 400;
+		text-transform: uppercase;
+		@media (min-width: $bp-md) {
+			font-size: 64px;
+			text-align: left;
+		}
+	}
+	&__cta-button {
+		align-self: center;
+		width: 100%;
+		text-align: center;
+		@include flex(center, center, row, 10px);
+
+		@media (min-width: $bp-md) {
+			align-self: flex-start;
+			max-width: fit-content;
+		}
+	}
+}
+
+.team-member-card-wrapper {
+	@include flex(center, flex-start, column, 15px);
+	padding: 20px 0;
+	&__heading {
+		@include flex(center, flex-start, column, 5px);
+	}
+	&__team-member-name {
+		color: $title-color;
+		text-align: center;
+		font-family: Gilroy-bold;
+		font-size: 30px;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	&__job-title {
+		color: $title-color;
+		text-align: center;
+		font-family: Gilroy-light;
+		font-size: 20px;
+		font-weight: 400;
+	}
+	&__social-network-icons-wrapper {
+		gap: 10px;
+	}
+	&:nth-of-type(4),
+	&:nth-of-type(6) {
+		margin-bottom: 30px;
+	}
+	width: 100%;
+	& img {
+		width: 100%;
+	}
+}

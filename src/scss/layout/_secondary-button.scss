@@ -1,0 +1,31 @@
+.secondary-button {
+  @include flex(center, center, row);
+  padding: 10px 30px;
+  border: none;
+  align-self: stretch;
+  background-color: $main-color;
+  border-radius: 50px;
+  color: #fff;
+  font-family: Gilroy-Medium;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: capitalize;
+  
+@media (min-width: $bp-md) {
+    min-width: 196px;
+    align-self: center;
+ }
+  @media (min-width: $bp-lg) {
+    align-self: flex-start;
+  }
+}
+
+.secondary-button::after{
+    content: "";
+    background-image: url(../../img/logos/arrow.svg);
+    width: 24px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    margin-left: 10px;
+}

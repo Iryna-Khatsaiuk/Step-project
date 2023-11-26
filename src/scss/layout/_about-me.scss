@@ -1,0 +1,81 @@
+.about-me-section__content-wrapper {
+	@include flex(stretch, flex-start, column, 30px);
+
+	@media (min-width: $bp-lg) {
+		@include flex(stretch, flex-start, row, 70px);
+		padding-right: 0;
+		padding: 70px 0 70px 70px;
+	}
+	@media (max-width: 1400px) and (min-width: 1200px) {
+		gap: 15px;
+		padding-left: 35px;
+	}
+}
+.main-heading-section__intro-text {
+	color: $main-color;
+	text-align: center;
+	font-family: Gilroy-light;
+	font-size: 30px;
+	font-weight: 300;
+	padding: 30px 30px 0 30px;
+
+	&--bold {
+		font-family: Gilroy-bold;
+	}
+	@media (min-width: $bp-md) {
+		font-size: 52px;
+	}
+	@media (min-width: $bp-lg) {
+		font-size: 62px;
+		text-align: start;
+		padding: 0;
+	}
+	@media (max-width: 1400px) and (min-width: 1200px) {
+		font-size: 51px;
+	}
+}
+.about-me-section__about-me-banner-wrapper {
+	@include flex(flex-end, flex-start, column, 30px);
+	background-color: black;
+	width: 100%;
+	@media (min-width: $bp-lg) {
+		align-self: stretch;
+		align-items: flex-end;
+		justify-content: center;
+		padding-left: 0;
+	}
+	@media (max-width: 1400px) and (min-width: 1200px) {
+		padding-right: 35px;
+	}
+}
+.about-me-section__section-heading {
+	color: #fff;
+	text-align: right;
+	font-family: gilroy-medium;
+	font-size: 28px;
+	line-height: 28px;
+	text-transform: uppercase;
+}
+.social-icons-wrapper {
+	@include flex(flex-start, flex-end, row, 20px);
+	&__social-icon-wrapper {
+		display: block;
+		max-width: 50px;
+		max-height: 50px;
+	}
+}
+.about-me-section__logo-wrapper {
+	@include flex(flex-start, center, row, 20px);
+	flex-wrap: wrap;
+	align-items: center;
+
+	.about-me-section__logo-item-wrapper {
+		padding: 15px 40px;
+		background-color: #fff;
+		border-radius: 50px;
+	}
+	@media (min-width: $bp-lg) {
+		border-top: 1px solid $main-color;
+		border-bottom: 1px solid $main-color;
+	}
+}

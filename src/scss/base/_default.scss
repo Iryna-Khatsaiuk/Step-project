@@ -1,0 +1,92 @@
+body {
+	background: #f5f3ea;
+	min-width: 320px;
+}
+* {
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.section-block {
+	padding: 30px 20px;
+	@media (min-width: $bp-md) {
+		padding: 30px 30px;
+	}
+	@media (min-width: $bp-lg) {
+		padding: 70px 70px;
+	}
+}
+
+body {
+	background: #f5f3ea;
+}
+
+.section-with-margin {
+	margin-left: 20px;
+	margin-right: 20px;
+	@media (min-width: $bp-md) {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	@media (min-width: $bp-lg) {
+		margin-left: 70px;
+		margin-right: 70px;
+	}
+}
+.black-text-uppercase {
+	color: $black-color;
+	font-family: Gilroy-Light;
+	font-weight: 400;
+	text-transform: uppercase;
+	@media (min-width: $bp-md) {
+		line-height: 48px;
+	}
+}
+.section-header {
+	color: #252525;
+	text-align: center;
+	font-family: Gilroy-light;
+	font-size: 80px;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	@media (min-width: $bp-md) {
+		font-size: 150px;
+	}
+
+	@media (min-width: $bp-lg) {
+		font-size: 212px;
+	}
+}
+.site-chip-item {
+	padding: 15px 30px;
+	background-color: white;
+	border-radius: 50px;
+	min-width: fit-content;
+	@media (max-width: 350px) {
+		padding: 15px 20px;
+	}
+	text-align: center;
+}
+.main-site-button {
+	@include flex(center, flex-start, row, 10px);
+	padding: 15px 30px;
+	color: #fff;
+	font-family: Gilroy-light;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: capitalize;
+	background-color: $main-color;
+	border-radius: 50px;
+	position: relative;
+	align-self: flex-end;
+	&::after {
+		content: url(../../img/works/arrow-right.png);
+		padding-top: 5px;
+	}
+	@media (max-width: 350px) {
+		padding: 15px 15px;
+	}
+}
+img {
+	vertical-align: bottom;
+}
